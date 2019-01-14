@@ -1,0 +1,121 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf100
+{\fonttbl\f0\froman\fcharset0 TimesNewRomanPSMT;\f1\froman\fcharset0 TimesNewRomanPS-BoldMT;\f2\fswiss\fcharset0 Helvetica;
+\f3\fswiss\fcharset0 Helvetica-Bold;\f4\fmodern\fcharset0 CourierNewPSMT;\f5\fswiss\fcharset0 Helvetica-Oblique;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+{\info
+{\author joe lerman}
+{\*\company Maharishi University Of Management}}\margl1440\margr1440\vieww19040\viewh21300\viewkind1
+\deftab720
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f0\fs24 \cf0 \
+ 
+\f1\b\fs23 MPP Standardized Programming Exam  -  March, 2017 \
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 \
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f2\fs22 \cf0 This 90-minute programming test measures the success of your MPP course by testing your new skill level in two core areas of the MPP curriculum: (1) Lambdas and streams, and (2) Implementation of UML in Java.You will need to demonstrate a basic level of competency in these areas in order to move past MPP. \
+Your test will be evaluated with marks "Pass" or "Fail." A "Pass" means that you have completed this portion of evaluation only; your professor will evaluate your work over the past month to determine your final grade in your MPP course, taking into account your work on exams and assignments. A "Fail" means you will need to repeat MPP, with your professor's approval. \
+There are two programming problems to solve on this test. You will use the Java classes that have been provided for you in an Eclipse workspace. You will complete the necessary coding in these classes, following the instructions provided below. \
+\
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f3\b \cf0 Problem 2. [UML 
+\f2\b0 \uc0\u61614  
+\f3\b Code] 
+\f2\b0 In a company, employees may have multiple bank accounts: zero or more savings accounts and zero or more checking accounts. Each checking account has an account id, a balance, and a monthly fee. Each savings account has an account id, a balance, and an interest rate associated with the particular type of savings account. It is possible to read the current balance in any of these accounts, but it is also possible to determine the balance after interest or monthly fee is applied by calling the 
+\f4 computeUpdatedBalance 
+\f2 method on the account. \
+An administrator has access to all employee records and from time to time computes the total balance across all employee-owned accounts; for each account, the balance that is needed in this computation is the 
+\f5\i updated balance
+\f2\i0 . This computation is performed in the static method \
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f4 \cf0 computeUpdatedBalanceSum \
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f2 \cf0 in the 
+\f4 Admin 
+\f2 class. \
+Below is a class diagram showing the classes involved and relationships between them. A sequence diagram for the operation 
+\f4 computeUpdatedBalanceSum 
+\f2 is also provided. Your task in this problem is to write Java code that implements the classes and relationships shown in the diagram. Shells for the 
+\f4 Admin 
+\f2 and the 
+\f4 Employee 
+\f2 classes have been provided in your workspace. Also, a 
+\f4 Main 
+\f2 class (with a 
+\f4 main 
+\f2 method) has been provided for you to test your code \'96 the code in the 
+\f4 main 
+\f2 method has been commented out; when you are ready to test your code, you can uncomment it. \
+The method 
+\f4 computeUpdatedBalance 
+\f2 in 
+\f4 CheckingAccount 
+\f2 does the following computation to obtain the return value: \
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f4 \cf0 balance \'96 monthlyFee
+\f2 . \
+The method 
+\f4 computeUpdatedBalance 
+\f2 in 
+\f4 SavingsAccount 
+\f2 performs the following computation to obtain the return value: \
+
+\f4 balance + (interestRate * balance)
+\f2 . \
+Points to notice about the class diagram: \
+\pard\pardeftab720\ri0\sa66\partightenfactor0
+\cf0 1. 
+\f4 CheckingAccount 
+\f2 and 
+\f4 SavingsAccount 
+\f2 are subclasses of 
+\f4 Account
+\f2 . Also, 
+\f4 Account 
+\f2 has several abstract methods which must be implemented in its subclasses. \
+2. There is a one-way association from 
+\f4 Employee 
+\f2 to 
+\f4 Account
+\f2 . It is important that your code reflects and maintains this association. \
+\pard\pardeftab720\ri0\partightenfactor0
+\cf0 3. The diagram has a mix of dependencies and associations; make sure your code distinguishes between these properly.     
+\f3\b \ul SEE NEXT PAGE!\
+
+\f2\b0 \ulnone \
+Start-up code for this problem can be found in the 
+\f4 prob2 
+\f2 package in your workspace, providing shells for the classes 
+\f4 Admin 
+\f2 and 
+\f4 Employee
+\f2 . A 
+\f4 Main 
+\f2 class, with a 
+\f4 main 
+\f2 method that launches the program, is provided in the package 
+\f4 prob2.launch
+\f2 , which you may use to test your code. You may not modify the signatures or qualifiers of the methods contained in the 
+\f4 Admin 
+\f2 or 
+\f4 Employee 
+\f2 classes that have been provided. You will need to create all the other classes mentioned in the diagrams. \
+\pard\pardeftab720\ri0\sl276\slmult1\sa200\partightenfactor0
+\cf0 Note: Your submitted code must accurately implement the UML models provided and must have no compiler or runtime errors.\
+\
+\pard\pardeftab720\ri0\sl276\slmult1\sa200\partightenfactor0
+
+\f3\b\fs24 \cf0 \ul \ulc0 Note that the UML diagram (and Sequence diagram) is a  .png  file that should be opened with Paint.\
+\pard\pardeftab720\ri0\sl276\slmult1\sa200\partightenfactor0
+
+\f2\b0\fs22 \cf0 \ulnone \
+}

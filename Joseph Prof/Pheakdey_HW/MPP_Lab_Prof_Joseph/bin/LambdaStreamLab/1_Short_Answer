@@ -1,0 +1,15 @@
+
+a. 	- Functional Programming 
+		+ is declarative, which makes it possible to write methods and program by declaring "what" is needed.
+	- Imperative Programming 
+		+ is procedural, it tells "how" the program suppose to run using the sequence of function calls that mirrors the requirements.
+
+
+b.	Explain the meaning of declarative programming. Give an example.
+declarative programming means that it tells the method/program what is needed rather that how to achieve a goal. 
+It is realized as we use it in functional programming which consume functional interface consisting of only one abstract method. 
+For instance lamda, which is a realization of functional interface.
+
+
+c.	Name the benefits of including functional style programming in Java
+Functional programming in Java makes it possible to write parts of Java programs more concisely, in a more readable way, in a more thread safe way, in a more parallelizable way, and in a more maintainable way, than ever before.  

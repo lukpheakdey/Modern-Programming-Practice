@@ -1,0 +1,546 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671
+{\fonttbl\f0\froman\fcharset0 TimesNewRomanPSMT;\f1\froman\fcharset0 TimesNewRomanPS-BoldMT;\f2\fswiss\fcharset0 Helvetica;
+\f3\fswiss\fcharset0 Helvetica-Bold;\f4\fmodern\fcharset0 CourierNewPSMT;\f5\froman\fcharset0 TimesNewRomanPS-ItalicMT;
+\f6\fswiss\fcharset0 Helvetica-BoldOblique;\f7\fmodern\fcharset0 Courier;\f8\fswiss\fcharset0 Helvetica-Oblique;
+}
+{\colortbl;\red255\green255\blue255;\red191\green191\blue191;}
+{\*\expandedcolortbl;;\csgray\c79525;}
+{\info
+{\author joe lerman}
+{\*\company Maharishi University Of Management}}\margl1440\margr1440\vieww12540\viewh15680\viewkind1
+\deftab720
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f0\fs24 \cf0 \
+ 
+\f1\b\fs23 MPP Standardized Programming Exam  -  April, 2017 \
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f0\b0 \cf0 \
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f2\fs22 \cf0 This 90-minute programming test measures the success of your MPP course by testing your new skill level in two core areas of the MPP curriculum: (1) Lambdas and streams, and (2) Implementation of UML in Java.You will need to demonstrate a basic level of competency in these areas in order to move past MPP. \
+Your test will be evaluated with marks "Pass" or "Fail." A "Pass" means that you have completed this portion of evaluation only; your professor will evaluate your work over the past month to determine your final grade in your MPP course, taking into account your work on exams and assignments. A "Fail" means you will need to repeat MPP, with your professor's approval. \
+There are two programming problems to solve on this test. You will use the Java classes that have been provided for you in an Eclipse workspace. You will complete the necessary coding in these classes, following the instructions provided below. \
+\
+\
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f3\b \cf0 Problem 2. [UML 
+\f2\b0 \uc0\u61614  
+\f3\b Code] 
+\f2\b0 In a company, the administrative office receives hourly formatted reports from the Billing, Sales, and Marketing Departments. Each of these departments provides a message queue, which the administrative office reads each hour. When it is time to read the department queues, the administrative office software reads each queue's message and then assembles all the messages into a report. A typical formatted report looks like this: \
+\
+\
+\
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f0 \cf0 For this problem, you will implement classes 
+\f4\fs20 BillingDept
+\f0 , 
+\f4 SalesDepSt
+\f0 , 
+\f4 MarketingDept
+\f0\fs22 , and their superclass 
+\f4\fs20 Department
+\f0\fs22 . Note from the class diagram (below) that each of these subclasses of 
+\f4\fs20 Department 
+\f0\fs22 implements the method 
+\f4\fs20 getName()
+\f0\fs22 . In the table below, the return values of this method are provided:\
+\
+\
+\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf2 \trbrdrl\brdrs\brdrw10\brdrcf2 \trbrdrr\brdrs\brdrw10\brdrcf2 
+\clvertalt \clshdrawnil \clwWidth9576\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrs\brdrw10\brdrcf2 \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrs\brdrw10\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f3\b\fs24 \cf0      Class                         Return value for the getName() method \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf2 \trbrdrb\brdrs\brdrw10\brdrcf2 \trbrdrr\brdrs\brdrw10\brdrcf2 
+\clvertalt \clshdrawnil \clwWidth9576\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrs\brdrw10\brdrcf2 \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrs\brdrw10\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+
+\itap2\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth2154\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth2154\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+
+\f4\b0\fs20 \cf0 BillingDept \nestcell 
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+\cf0 \
+"Billing" \nestcell 
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+\cf0 \nestcell \lastrow\nestrow\cell \lastrow\row
+\pard\pardeftab720\ri0\sl276\slmult1\sa200\partightenfactor0
+
+\f2 \cf0 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf2 \trbrdrl\brdrs\brdrw10\brdrcf2 \trbrdrb\brdrs\brdrw10\brdrcf2 \trbrdrr\brdrs\brdrw10\brdrcf2 
+\clvertalt \clshdrawnil \clwWidth9576\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrs\brdrw10\brdrcf2 \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrs\brdrw10\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+
+\itap2\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth2154\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth2154\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+
+\f4 \cf0 SalesDept \nestcell 
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+\cf0 \
+"Sales" \nestcell 
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+\cf0 \nestcell \lastrow\nestrow\cell \lastrow\row
+\pard\pardeftab720\ri0\sl276\slmult1\sa200\partightenfactor0
+
+\f2 \cf0 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf2 \trbrdrl\brdrs\brdrw10\brdrcf2 \trbrdrb\brdrs\brdrw10\brdrcf2 \trbrdrr\brdrs\brdrw10\brdrcf2 
+\clvertalt \clshdrawnil \clwWidth9576\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrs\brdrw10\brdrcf2 \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrs\brdrw10\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+
+\itap2\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth2154\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth2154\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+
+\f4 \cf0 MarketingDept \nestcell 
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+\cf0 \
+"Marketing" \nestcell 
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+\cf0 \nestcell \lastrow\nestrow\cell \lastrow\row
+\pard\pardeftab720\ri0\sl276\slmult1\sa200\partightenfactor0
+
+\f2 \cf0 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf2 \trbrdrl\brdrs\brdrw10\brdrcf2 \trbrdrb\brdrs\brdrw10\brdrcf2 \trbrdrr\brdrs\brdrw10\brdrcf2 
+\clvertalt \clshdrawnil \clwWidth9576\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrs\brdrw10\brdrcf2 \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrs\brdrw10\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\fs22 \cf0 \cell \lastrow\row
+\pard\pardeftab720\ri0\partightenfactor0
+\cf0 \
+\
+\
+   You will also implement an 
+\f4 Admin 
+\f2 class and the method 
+\f4 hourlyCompanyMessage
+\f2 (), which reads the message in each of the 
+\f4 Department 
+\f2 queues and assembles them into a report, returned as a 
+\f4 String
+\f2 . In order to assemble the messages and organize them into the correct format, the 
+\f4 format() 
+\f2 method in 
+\f4 Admin 
+\f2 must be called. \
+   The 
+\f4 Department 
+\f2 queues are implementations of a special queue class that has been provided for you, called 
+\f4 StringQueue
+\f2 . The 
+\f4 StringQueue 
+\f2 stores messages within each department class, and your 
+\f4 hourlyCompanyMessage() 
+\f2 implementation will read each of the departmental queues to get the current message from each. \
+   It is possible that, when you access one of the Departmental queues, an 
+\f4 EmptyQueueException 
+\f2 (which is a class that has been implemented for you) could be thrown; your 
+\f4 hourlyCompanyMessage() 
+\f2 method must handle any such thrown exception. \
+\
+   There is a test class, 
+\f4 Main
+\f2 , whose 
+\f4 main 
+\f2 method provides test data to test your code. The expected output of the 
+\f4 main 
+\f2 method (after commented sections have been uncommented) is:\
+\
+\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3231\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth3231\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\fs20 \cf0 \cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3231\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth3231\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f4 \cf0 \cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3231\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth3231\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\fs22 \cf0 Important: Each of the departments 
+\f4 BillingDept, SalesDept, MarketingDept 
+\f0 has a method besides 
+\f4 getName()
+\f0 , indicated in the class diagram below. These methods have already been declared for you \'96 you \ul should not implement these methods\ulnone . The table below lists these methods and the class each belongs to; remember, these methods 
+\f5\i do not 
+\f0\i0 need to be implemented and they have already been declared for you.
+\f4\fs20 \cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3231\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth3231\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \cell 
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \cell \lastrow\row
+\pard\pardeftab720\ri0\sl276\slmult1\sa200\partightenfactor0
+
+\f2\fs22 \cf0 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf2 \trbrdrl\brdrs\brdrw10\brdrcf2 \trbrdrr\brdrs\brdrw10\brdrcf2 
+\clvertalt \clshdrawnil \clwWidth9576\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrs\brdrw10\brdrcf2 \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrs\brdrw10\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\f0\fs24 \cf0           
+\f3\b Methods You Should 
+\f6\i Not 
+\f3\i0 Implement \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf2 \trbrdrb\brdrs\brdrw10\brdrcf2 \trbrdrr\brdrs\brdrw10\brdrcf2 
+\clvertalt \clshdrawnil \clwWidth9576\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrs\brdrw10\brdrcf2 \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrs\brdrw10\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+
+\itap2\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth2379\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth2379\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+
+\f7\b0\fs22 \cf0 BillingDept \nestcell 
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+\cf0 \
+monthlyReport() \nestcell 
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+\cf0 \nestcell \lastrow\nestrow\cell \lastrow\row
+\pard\pardeftab720\ri0\sl276\slmult1\sa200\partightenfactor0
+
+\f2\fs18 \cf0 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf2 \trbrdrl\brdrs\brdrw10\brdrcf2 \trbrdrb\brdrs\brdrw10\brdrcf2 \trbrdrr\brdrs\brdrw10\brdrcf2 
+\clvertalt \clshdrawnil \clwWidth9576\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrs\brdrw10\brdrcf2 \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrs\brdrw10\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+
+\itap2\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth2379\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth2379\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+
+\f7\fs22 \cf0 SalesDept \nestcell 
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+\cf0 \
+requestMarketingMaterials() \nestcell 
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+\cf0 \nestcell \lastrow\nestrow\cell \lastrow\row
+\pard\pardeftab720\ri0\sl276\slmult1\sa200\partightenfactor0
+
+\f2\fs18 \cf0 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf2 \trbrdrl\brdrs\brdrw10\brdrcf2 \trbrdrb\brdrs\brdrw10\brdrcf2 \trbrdrr\brdrs\brdrw10\brdrcf2 
+\clvertalt \clshdrawnil \clwWidth9576\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrs\brdrw10\brdrcf2 \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrs\brdrw10\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+
+\itap2\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth2379\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth2379\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+
+\f7\fs22 \cf0 MarketingDept \nestcell 
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+\cf0 \
+applyForJob() \nestcell 
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+\cf0 \nestcell \lastrow\nestrow\cell \lastrow\row
+\pard\pardeftab720\ri0\sl276\slmult1\sa200\partightenfactor0
+
+\f2\fs18 \cf0 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf2 \trbrdrl\brdrs\brdrw10\brdrcf2 \trbrdrb\brdrs\brdrw10\brdrcf2 \trbrdrr\brdrs\brdrw10\brdrcf2 
+\clvertalt \clshdrawnil \clwWidth9576\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrs\brdrw10\brdrcf2 \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrs\brdrw10\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+
+\fs22 \cf0 \cell \lastrow\row
+\pard\pardeftab720\ri0\sl276\slmult1\sa200\partightenfactor0
+\cf0 \
+\
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f8\i \cf0 Tasks. \
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f2\i0 \cf0 \
+\pard\pardeftab720\ri0\sa58\partightenfactor0
+\cf0 (1) Carefully implement the classes shown in the class diagram, with behavior shown in the sequence diagram (below), observing multiplicities, roles, and stereotypes. \
+(2) Implement all operations shown in the class diagram, except for those in the table above. \
+\pard\pardeftab720\ri0\partightenfactor0
+\cf0 (3) The most important implementation you need to do is for the 
+\f4 Admin 
+\f2 method 
+\f4 hourlyCompanyMessage
+\f2 . During evaluation of your code, the expected output of this method (shown above) will be compared with yours. To test your output, use the 
+\f4 main 
+\f2 method provided for you in the 
+\f4 Main 
+\f2 class. \
+\pard\pardeftab720\ri0\sl276\slmult1\sa200\partightenfactor0
+\cf0 \
+\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf2 \trbrdrl\brdrs\brdrw10\brdrcf2 \trbrdrb\brdrs\brdrw10\brdrcf2 \trbrdrr\brdrs\brdrw10\brdrcf2 
+\clvertalt \clshdrawnil \clwWidth9576\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrs\brdrw10\brdrcf2 \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrs\brdrw10\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+
+\itap2\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3012\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth3012\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth3012\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+
+\f3\b \cf0 Method You Need to \ul Implement 
+\f2\b0 \ulnone \nestcell 
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+\cf0 \
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+
+\f3\b \cf0 \ul \ulc0 Class 
+\f2\b0 \nestcell 
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+\cf0 \ulc0 \
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+
+\f3\b \cf0 \ulc0 Description 
+\f2\b0 \nestcell 
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+\cf0 \ulc0 \nestcell \lastrow\nestrow\cell \lastrow\row
+\pard\pardeftab720\ri0\sl276\slmult1\sa200\partightenfactor0
+\cf0 \ulnone \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf2 \trbrdrl\brdrs\brdrw10\brdrcf2 \trbrdrb\brdrs\brdrw10\brdrcf2 \trbrdrr\brdrs\brdrw10\brdrcf2 
+\clvertalt \clshdrawnil \clwWidth9576\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrs\brdrw10\brdrcf2 \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrs\brdrw10\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+
+\itap2\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3012\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth3012\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth3012\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+
+\f4\fs20 \cf0 getName \nestcell 
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+\cf0 \
+BillingDept, SalesDept, MarketingDept \nestcell 
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+\cf0 \
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+
+\f2\fs22 \cf0 Returns the name of the department (using values mentioned in table above) \
+\nestcell 
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+\cf0 \nestcell \lastrow\nestrow\cell \lastrow\row
+\pard\pardeftab720\ri0\sl276\slmult1\sa200\partightenfactor0
+\cf0 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf2 \trbrdrl\brdrs\brdrw10\brdrcf2 \trbrdrb\brdrs\brdrw10\brdrcf2 \trbrdrr\brdrs\brdrw10\brdrcf2 
+\clvertalt \clshdrawnil \clwWidth9576\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrs\brdrw10\brdrcf2 \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrs\brdrw10\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+
+\itap2\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3012\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth3012\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth3012\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+
+\f4\fs20 \cf0 addMessage \nestcell 
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+\cf0 \
+Department \nestcell 
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+\cf0 \
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+
+\f2\fs22 \cf0 Adds a message to the queue that is stored in Department \
+\nestcell 
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+\cf0 \nestcell \lastrow\nestrow\cell \lastrow\row
+\pard\pardeftab720\ri0\sl276\slmult1\sa200\partightenfactor0
+\cf0 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf2 \trbrdrl\brdrs\brdrw10\brdrcf2 \trbrdrb\brdrs\brdrw10\brdrcf2 \trbrdrr\brdrs\brdrw10\brdrcf2 
+\clvertalt \clshdrawnil \clwWidth9576\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrs\brdrw10\brdrcf2 \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrs\brdrw10\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+
+\itap2\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3012\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth3012\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth3012\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+
+\f4\fs20 \cf0 nextMessage \nestcell 
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+\cf0 \
+Department \nestcell 
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+\cf0 \
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+
+\f2\fs22 \cf0 Reads the queue stored in Department and handles any exception that could be thrown by the queue \
+\nestcell 
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+\cf0 \nestcell \lastrow\nestrow\cell \lastrow\row
+\pard\pardeftab720\ri0\sl276\slmult1\sa200\partightenfactor0
+\cf0 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf2 \trbrdrl\brdrs\brdrw10\brdrcf2 \trbrdrb\brdrs\brdrw10\brdrcf2 \trbrdrr\brdrs\brdrw10\brdrcf2 
+\clvertalt \clshdrawnil \clwWidth9576\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrs\brdrw10\brdrcf2 \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrs\brdrw10\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+
+\itap2\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3012\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth3012\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth3012\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+
+\f4\fs20 \cf0 format(name, msg) \nestcell 
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+\cf0 \
+Admin \nestcell 
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+\cf0 \
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+
+\f2\fs22 \cf0 Returns a string in the form 
+\f4\fs20 name: msg \
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+
+\f2 \cf0 \nestcell 
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+\cf0 \nestcell \lastrow\nestrow\cell \lastrow\row
+\pard\pardeftab720\ri0\sl276\slmult1\sa200\partightenfactor0
+\cf0 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf2 \trbrdrl\brdrs\brdrw10\brdrcf2 \trbrdrb\brdrs\brdrw10\brdrcf2 \trbrdrr\brdrs\brdrw10\brdrcf2 
+\clvertalt \clshdrawnil \clwWidth9576\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrs\brdrw10\brdrcf2 \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrs\brdrw10\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+
+\itap2\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth3012\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth3012\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth3012\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+
+\f4 \cf0 hourlyCompanyMessage \nestcell 
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+\cf0 \
+Admin \nestcell 
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+\cf0 \
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+
+\f2\fs22 \cf0 Reads all Department queues and formats each message using the format method. \nestcell 
+\pard\intbl\itap2\pardeftab720\ri0\partightenfactor0
+\cf0 \nestcell \lastrow\nestrow\cell \lastrow\row
+\pard\pardeftab720\ri0\sl276\slmult1\sa200\partightenfactor0
+\cf0 \
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf2 \trbrdrl\brdrs\brdrw10\brdrcf2 \trbrdrb\brdrs\brdrw10\brdrcf2 \trbrdrr\brdrs\brdrw10\brdrcf2 
+\clvertalt \clshdrawnil \clwWidth9576\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf2 \clbrdrl\brdrs\brdrw10\brdrcf2 \clbrdrb\brdrs\brdrw10\brdrcf2 \clbrdrr\brdrs\brdrw10\brdrcf2 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\ri0\partightenfactor0
+\cf0 \cell \lastrow\row
+\pard\pardeftab720\ri0\sl276\slmult1\sa200\partightenfactor0
+\cf0 \
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f8\i \cf0 Requirements for this problem. \
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f2\i0 \cf0 \
+\pard\pardeftab720\ri0\sa66\partightenfactor0
+\cf0 (1) You must use the 
+\f4 StringQueue 
+\f2 class provided whenever a queue is needed in your code. \
+(2) The output of the 
+\f4 Admin 
+\f2 method 
+\f4 hourlyCompanyMessage 
+\f2 must be formatted as it has been done in the samples shown above. \
+(3) Your 
+\f4 hourlyCompanyMessage 
+\f2 must call the 
+\f4 format() 
+\f2 method to perform the necessary formatting of messages. \
+(4) The flow of your code, when 
+\f4 hourlyCompanyMessage 
+\f2 is executed, must match the sequence diagram shown below. \
+(5) The 
+\f4\fs20 nextMessage() 
+\f2\fs22 method in 
+\f4\fs20 Department 
+\f2\fs22 must read the next value in the 
+\f4\fs20 StringQueue 
+\f2\fs22 and return it. Since reading the 
+\f4\fs20 StringQueue 
+\f2\fs22 could cause an 
+\f4\fs20 EmptyQueueException 
+\f2\fs22 to be thrown, you must make use of a 
+\f4\fs20 try/catch 
+\f2\fs22 block. The body of the 
+\f4\fs20 catch 
+\f2\fs22 block can be left empty (you do not need to handle an 
+\f4 EmptyQueueException 
+\f2 in any special way). \
+\pard\pardeftab720\ri0\partightenfactor0
+\cf0 (6) The 
+\f4 String 
+\f2 returned from 
+\f4 hourlyCompanyMessage() 
+\f2 in 
+\f4 Admin 
+\f2 must have the following format (which is produced by the 
+\f4 format(name, msg) 
+\f2 method): \
+\
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f4 \cf0 <department_name>: <message> \
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f2 \cf0 For example: \
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f4 \cf0 Billing: This is a message from the BillingDepartment \
+\pard\pardeftab720\ri0\partightenfactor0
+
+\f2 \cf0 The department name that appears in the output is obtained by calling the 
+\f4 getName() 
+\f2 method. \
+\
+\pard\pardeftab720\ri0\sa61\partightenfactor0
+\cf0 (7) You must not modify the code in 
+\f4 StringQueue 
+\f2 or 
+\f4 EmptyQueueException
+\f2 . (Note that these two classes are shown in the diagrams, but implementation details are not shown since they are already fully implemented.) And, you are strongly advised to avoid modifying any part of the 
+\f4 Main 
+\f2 class, except for uncommenting the commented part of the code when you are ready to use it . Note: The 
+\f4 Main 
+\f2 class plays the role of an actor in this piece of software, and is indicated this way in the sequence diagram. (For this reason, 
+\f4 Main 
+\f2 does not appear in the class diagram.) \
+\
+\pard\pardeftab720\ri0\partightenfactor0
+\cf0 (8) Your submitted code must not have compiler errors or runtime exceptions when executed. \
+\pard\pardeftab720\ri0\sl276\slmult1\sa200\partightenfactor0
+\cf0 \
+\pard\pardeftab720\ri0\sl276\slmult1\sa200\partightenfactor0
+
+\f3\b\fs24 \cf0 \ul \ulc0 Note that the UML diagram (and Sequence diagram) is a  .png  file that should be opened with Paint.\
+\
+}
